@@ -1,0 +1,79 @@
+1.echo "Hello World!"
+
+2.ls
+
+3.read a;echo "Hello $a";
+
+4.touch file.txt 
+
+5.cat > file.txt
+  Hello this is a demo text file.
+
+6.cat file.txt
+
+7.For Loop
+  for i in 1 2 3 4
+  do 
+  echo "No: $i"
+  done
+
+  While loop
+  k=0
+  while [ $k -lt 4 ]
+  do
+  echo "Day $k";
+  k=`expr $k + 1`;
+  done 
+
+  Switch case
+  choice=0
+  printf "Enter your choice:\n"
+  read choice
+  while [ $choice -lt 4 ]
+  do 
+      case $choice in
+      1)
+          echo "Selected No 1"
+          ;;
+      2)
+          echo "Selected No 2"
+          ;;
+      3)
+          echo "Selected No 3"
+          ;;
+      4)
+          echo "Selected No 4"
+          ;;
+      esac
+      printf "Enter your choice:\n"
+      read choice
+  done
+
+Arithmetic operations
+8.echo `expr 2 + 2`
+9.echo `expr 2 - 2`
+10.echo `expr 2 \* 2`
+11.echo `expr 2 / 2`
+12.echo `expr 2 % 2`
+
+comparision
+13.echo 10 -eq 10
+
+14.grep
+  grep -i "pattern" filename.txt  -- ignore case for matching 
+  grep -c "pattern" filename.txt  -- prints count of matched patterns
+  grep -l "pattern" filename.txt  -- displays list of filenames
+  grep -n "pattern" filename.txt  -- displays matched lines and their line number
+  grep -o "pattern" filename.txt  -- prints only matched part of matched lines
+  grep -v "pattern" filename.txt  -- prints all except matched lines
+  grep "^pattern" filename.txt  -- match lines that start with the given string
+  grep "pattern$" filename.txt  -- match lines that end with the given string
+
+15.sed
+  sed 's/pattern1/pattern2/' demo.txt -- Replacing or Substituting string
+  sed 's/pattern1/pattern2/n' demo.txt -- Replacing nth occurrence of a pattern in a line
+  sed 's/pattern1/pattern2/g' demo.txt -- Replacing all the occurrence of the pattern in a line
+  sed 's/pattern1/pattern2/ng' demo.txt -- Replacing from nth to all the occurrences of the pattern in a line
+  sed 'n s/pattern1/pattern2/' demo.txt -- Replacing string on a specific line number
+  sed 'nd' demo.txt -- Deleting nth line from a particular file
+  
